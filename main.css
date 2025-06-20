@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+/* 左サイドバー */
+.sidebar {
+    width: 280px;
+    background-color: #f0f2f5;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav li a.active {
+    border: 2px solid #e74c3c; /* 画像の赤い丸を表現 */
+    background-color: #fff;
+}
+
+.sub-nav {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.sub-nav p {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.sub-nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+/* 右メインコンテンツ */
+.main-content {
+    flex: 1;
+    padding: 40px 60px;
+    background-color: #a67b5b; /* 画像の茶色背景 */
+    color: #fff;
+    position: relative;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+.main-header {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.main-header h2 {
+    font-size: 48px;
+    text-align: center;
+    margin: 20px 0 40px 0;
+    font-weight: bold;
+}
+
+.header-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #fff;
+    opacity: 0.7;
+}
+
+/* スクロールアニメーション用セクション */
+.editors {
+    margin-top: 20px;
+    /* 初期状態では透明で少し下に配置 */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* JavaScriptによってこのクラスが付与されると表示される */
+.editors.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.editors h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.fade-in-prompt {
+    font-size: 16px;
+    margin-top: 0;
+    padding-left: 5px;
+    opacity: 0.9;
+}
+
+.editor-list {
+    margin-top: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.editor-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.editor-item:last-child {
+    border-bottom: none;
+}
+
+.editor-item span {
+    flex-basis: 25%;
+}
+.editor-item span:first-child {
+    flex-basis: 40%;
+}
