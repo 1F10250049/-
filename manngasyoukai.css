@@ -160,3 +160,16 @@ body {
     color: #555;
     line-height: 1.5; /* 行間 */
 }
+/* manngasyoukai.css */
+
+/* .recommendation-section h2 のスタイルがあるところに以下を追加または調整 */
+.recommendation-section h2 a {
+    text-decoration: none; /* 下線を削除 */
+    color: inherit; /* 親要素（h2）の色を継承 */
+    /* 必要であれば、特定のリンク色を指定することもできます（例: color: #007bff;） */
+}
+
+.recommendation-section h2 a:hover {
+    text-decoration: underline; /* ホバー時に下線を表示 */
+    color: #0056b3; /* ホバー時の色を少し濃くする */
+}
