@@ -52,8 +52,8 @@ body {
 }
 
 .sidebar nav li a.active {
-    border: 2px solid #e74c3c; /* 画像の赤い丸を表現 */
-    background-color: #fff;
+    border: 2px solid #fcf121; /* 画像の赤い丸を表現 */
+    background-color: #fcf121;
 }
 
 .sub-nav {
@@ -83,8 +83,21 @@ body {
 }
 
 .main-header {
+        background-image: url('images/manga-bg.jpg'); /* 背景画像を指定 */
+    background-size: cover; /* 要素全体を覆うように画像を拡大縮小 */
+    background-position: center; /* 画像を中央に配置 */
+    position: relative; /* 子要素の位置を調整するために必要 */
+    color: white; /* 文字の色を白に変更 */
+    text-shadow: 2px 2px 4px #000000; /* 文字に黒い影を付けて読みやすくする */
     margin-bottom: 20px;
     position: relative;
+    /* ↓↓ ここから下を追加・変更 ↓↓ */
+    padding: 200px 30px; /* 上下の余白を大きく取る（上下に80px、左右に40px） */
+    display: flex; /* 中の要素を柔軟に配置する */
+    flex-direction: column; /* 要素を縦に並べる */
+    justify-content: center; /* 縦方向の中央に配置 */
+    align-items: center; /* 横方向の中央に配置 */
+    text-align: center; /* h1なども中央揃えにする */
 }
 
 .main-header h1 {
