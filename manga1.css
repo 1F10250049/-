@@ -70,3 +70,109 @@ body {
     color: #007bff;
     font-size: 16px;
 }
+
+/* ===================
+   メインコンテンツ
+=================== */
+.main-content {
+    flex: 1; /* サイドバー以外の残りの幅をすべて使用 */
+    padding: 20px 40px;
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: auto; /* コンテンツが多ければスクロール */
+}
+
+/* パンくずリスト */
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* コンテンツ本体（テキストとポスター） */
+.content-body {
+    display: flex;
+    gap: 40px; /* テキストとポスターの間の余白 */
+}
+
+/* 左側のテキストエリア */
+.text-content {
+    flex: 3; /* 幅の比率 */
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.sub-section-title {
+    font-size: 16px;
+    font-weight: bold;
+    border-left: 5px solid #333;
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cast-staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.cast-staff-table th, .cast-staff-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+.cast-staff-table th {
+    background-color: #f9f9f9;
+    width: 120px; /* 見出しセルの幅を固定 */
+    font-weight: normal;
+}
+
+/* 右側のポスターエリア */
+.poster-content {
+    flex: 1; /* 幅の比率 */
+}
+.poster-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* 予告編セクション */
+.trailer-section {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* 公式サイトセクション */
+.official-site {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.official-site p {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.official-site a {
+    color: #007bff;
+    text-decoration: none;
+}
