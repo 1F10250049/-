@@ -1,0 +1,187 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+/* 左サイドバー */
+.sidebar {
+    width: 280px;
+    background-color: #edeeef;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav li a.active {
+    border: 2px solid #fcf121;
+    background-color: #fcf121;
+}
+
+.sub-nav {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.sub-nav p {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.sub-nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
+
+/* ===================
+    メインコンテンツ
+=================== */
+.main-content {
+    flex: 1;
+    padding: 20px 40px;
+    background-color: #fff;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* パンくずリスト */
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* コンテンツ本体 */
+.content-body {
+    /* display: flex; を削除して上下配置に */
+}
+
+/* 上部のポスターエリア */
+.poster-content {
+    width: 100%;
+    margin-bottom: 30px; /* 画像とタイトルの間に余白を追加 */
+}
+.poster-content img {
+    width: 100%;
+    height: auto;
+}
+
+/* テキストエリア */
+.text-content {
+    /* flexプロパティは不要なので削除 */
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00849c;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* description内の見出しを太字に */
+.description b {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-top: 20px;
+}
+
+.sub-section-title {
+    color: #00849c;
+    font-size: 16px;
+    font-weight: bold;
+    border-left: 5px solid #333;
+    padding-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.cast-staff-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+.cast-staff-table th, .cast-staff-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    vertical-align: top;
+}
+.cast-staff-table th {
+    background-color: #f9f9f9;
+    width: 120px;
+    font-weight: normal;
+}
+
+/* 予告編セクション */
+.trailer-section {
+    margin-top: 40px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+/* 公式サイトセクション */
+.official-site {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.official-site p {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+.official-site a {
+    color: #007bff;
+    text-decoration: none;
+}
