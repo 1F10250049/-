@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+}
+
+/* 左サイドバー */
+.sidebar {
+    width: 280px;
+    background-color: #edeeef;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.sidebar nav li a.active {
+    border: 2px solid #fcf121; /* 画像の赤い丸を表現 */
+    background-color: #fcf121;
+}
+
+.sub-nav {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+.sub-nav p {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.sub-nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+}
