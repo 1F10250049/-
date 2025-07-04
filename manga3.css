@@ -1,0 +1,333 @@
+/* mannga3.css */
+
+body {
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+    margin: 0;
+    padding: 0; /* bodyのpaddingをリセットし、containerで管理 */
+    display: flex;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    width: 100%; /* コンテナがビューポートいっぱいに広がるように */
+    min-height: 100vh; /* 少なくともビューポートの高さを確保 */
+}
+
+/* 左サイドバー */
+.sidebar {
+    width: 280px; /* 固定幅 */
+    background-color: #edeeef;
+    height: 100vh; /* ビューポートの高さに合わせる */
+    padding: 20px;
+    box-sizing: border-box; /* paddingをwidthに含める */
+    border-right: 1px solid #ddd;
+    flex-shrink: 0; /* サイドバーが縮まないようにする */
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.logo img {
+    max-width: 100px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav li a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* ホバーエフェクト */
+}
+
+.sidebar nav li a:hover {
+    background-color: #e0e0e0;
+    color: #007bff;
+}
+
+.sidebar nav li a.active {
+    border: 2px solid #fcf121; /* 画像の赤い丸を表現 */
+    background-color: #fcf121;
+    color: #333; /* active時の文字色 */
+    font-weight: bold;
+}
+
+.sub-nav {
+    margin-top: 30px;
+    padding-left: 20px;
+}
+
+.sub-nav p {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+}
+
+.sub-nav a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    display: block;
+    padding: 5px 0;
+}
+
+.sub-nav a:hover {
+    text-decoration: underline;
+}
+
+/* メインコンテンツエリア */
+.main-content {
+    flex-grow: 1; /* 利用可能なスペースを全て占める */
+    padding: 30px; /* 全体的なパディング */
+    background-color: #fff; /* 白い背景 */
+    border-radius: 8px; /* 角を少し丸める */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* 軽い影 */
+    margin: 20px; /* bodyのpaddingをなくしたので、ここで全体のマージンを設定 */
+    box-sizing: border-box; /* paddingとborderをwidthに含める */
+
+    display: flex; /* h1とcontent-wrapperを縦に並べる */
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee; /* 下線 */
+    text-align: center; /* 中央寄せ */
+}
+
+/* サイト主のおすすめ作品 (mangasyoukai.html用) */
+.recommendation-section {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.recommendation-section h2 {
+    font-size: 1.1em;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.recommendation-section h2 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.recommendation-section h2 a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+}
+
+.recommendation-section p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* NARUTO紹介ページ (naruto.html用) */
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    flex-grow: 1;
+    padding-top: 20px; /* h1とのスペース */
+}
+
+.text-section {
+    flex: 2;
+    border: 1px solid #c0c0c0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.text-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-section ul li {
+    margin-bottom: 20px;
+}
+
+.text-section h3 {
+    font-size: 1.1em;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.text-section p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-container {
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 180px;
+    box-sizing: border-box;
+}
+
+.image-container .image-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.image-container img.main-image {
+    max-width: 80%;
+    height: auto;
+    display: block;
+}
+
+.image-container img.overlay-image {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 60px;
+    height: auto;
+    background-color: transparent;
+    border: none;
+}
+
+.image-caption {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 15px;
+    }
+    .sidebar nav ul {
+        display: flex;
+        flex-wrap: wrap; /* ナビゲーション項目を折り返す */
+        justify-content: space-around;
+    }
+    .sidebar nav li {
+        flex: 1 1 auto; /* 項目が自動的に幅を調整 */
+        text-align: center;
+        margin-bottom: 0; /* 小画面では下マージンをリセット */
+    }
+    .sidebar nav li a {
+        margin-bottom: 5px; /* 項目間のマージンを調整 */
+    }
+    .sidebar .sub-nav {
+        text-align: center;
+        margin-top: 15px;
+        padding-left: 0;
+    }
+    .main-content {
+        margin: 15px;
+        padding: 15px;
+    }
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .text-section, .image-section {
+        flex: auto;
+    }
+    .image-container {
+        min-height: 150px;
+    }
+    .image-container img.main-image {
+        max-width: 100%;
+    }
+    .image-container img.overlay-image {
+        width: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 0;
+    }
+    .main-content {
+        padding: 10px;
+        margin: 10px;
+    }
+    .page-title {
+        font-size: 1.5em;
+    }
+    .sidebar nav li a {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .logo img {
+        max-width: 80px;
+    }
+    .logo p {
+        font-size: 12px;
+    }
+    .text-section h3 {
+        font-size: 1em;
+    }
+    .text-section p {
+        font-size: 0.85em;
+    }
+    .image-caption {
+        font-size: 0.75em;
+    }
+}
